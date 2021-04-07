@@ -1,0 +1,8 @@
+<h2>Top Flowers</h2>
+<div class= "flower-menu">
+    <a *ngFor = 'let flower of flowers'
+    routerLink='/detail/{{flower.id}}'>
+        {{flower.name}}
+    </a>
+</div>
+<app-flower-search></app-flower-search>

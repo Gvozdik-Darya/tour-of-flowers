@@ -1,0 +1,20 @@
+<div>
+  <label id="new-flower">Flower name:</label>
+  <input for="new-flower" #flowerName/>
+  <br>
+  <label id="new-flower-color">Flower color:</label>
+  <input for="new-flower-color" #flowerColor/>
+
+  <button class="add-button" (click)="add(flowerName.value, flowerColor.value);
+  flowerName.value = ''; flowerColor.value = ''">Add flower</button>
+</div>
+<ul class="heroes" *ngFor = "let i of flowers">
+    <li>
+        <a routerLink = '/detail/{{i.id}}'>
+    <span class="badge">{{i.name}}</span> {{i.color}}
+</a>
+    <button class="delete" title = "delete flower" (click)="delete(i)">x</button>
+    </li>
+</ul>
+
+

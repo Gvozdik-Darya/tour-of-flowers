@@ -1,0 +1,9 @@
+<div *ngIf = "flower">
+    <h2>{{flower.name | uppercase}} Details</h2>
+    <div><span>name: </span>{{flower.name}}</div>
+    <div>
+         <label for="name">Flower name:</label>
+        <input id="name" [(ngModel)]="flower.name" placeholder="name">
+    </div></div>
+    <button (click) = 'goBack()'>Go back</button>
+    <button (click)="save()">save</button>
